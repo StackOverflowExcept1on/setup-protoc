@@ -65,7 +65,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
 
@@ -76,12 +76,12 @@ jobs:
           version: 3.x
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses:  actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Task
-        uses: arduino/setup-task@v1
+        uses: anthonyafgx/setup-task@chore/bump-node24
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
@@ -116,7 +116,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
 
@@ -127,12 +127,12 @@ jobs:
           version: 3.x
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses:  actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Task
-        uses: arduino/setup-task@v1
+        uses: anthonyafgx/setup-task@chore/bump-node24
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           version: 3.x
